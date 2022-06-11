@@ -1,2 +1,2 @@
 # my-blog
-Template from: https://www.google.com](https://github.com/StartBootstrap/startbootstrap-clean-blog
+Template from: https://github.com/StartBootstrap/startbootstrap-clean-blog
