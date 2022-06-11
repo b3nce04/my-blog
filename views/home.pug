@@ -1,0 +1,31 @@
+doctype html
+html(lang="hu")
+    include includes/head
+    body 
+        include includes/navbar
+        header.masthead(style="background-image: url('assets/img/home-bg.jpg')")
+            .container.position-relative.px-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-md-10.col-lg-8.col-xl-7
+                        .site-heading
+                            h1 My blog
+                            span.subheading Csak egy kis teszt GitHub-ra. :)
+        .container.px-4.px-lg-5
+            .row.gx-4.gx-lg-5.justify-content-center
+                .col-md-10.col-lg-8.col-xl-7
+
+                    each val in blogPosts
+                        .post-preview
+                            a(href='/post?id=' + val.postID)
+                                h2.post-title #{val.title}
+                                h3.post-subtitle #{val.subTitle}
+                            p.post-meta
+                                | Szerző:  
+                                a(href='#!') #{val.author} 
+                                | Dátum: #{val.date}
+                        hr.my-4
+
+                    // Pager
+                    .d-flex.justify-content-end.mb-4
+                        a.btn.btn-primary.text-uppercase(href='#!') Régebbi cikkek →
+        include includes/footer
